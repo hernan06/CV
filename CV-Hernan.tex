@@ -32,7 +32,7 @@
 
 
 \newlength{\spacebox}
-\settowidth{\spacebox}{8888888888}				% Box to align text
+\settowidth{\spacebox}{888888888888888888888}				% alineando modifique
 \newcommand{\sepspace}{\vspace*{1em}}			% Vertical space macro
 
 \newcommand{\MyName}[1]{
@@ -46,10 +46,10 @@
 \newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
 
 \newcommand{\PersonalEntry}[2]{
-		\noindent\hangindent=2em\hangafter=0 		% Indentation
+		\noindent\hangindent=1em\hangafter=0 		% Indentation
 		\parbox{\spacebox}{						% Box to align text
 		\textit{#1}}								% Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}					% Entry value
+		\hspace{2em} #2 \par}					% Entry value
 
 \newcommand{\SkillsEntry}[2]{						% Same as \PersonalEntry
 		\noindent\hangindent=2em\hangafter=0 		% Indentation
@@ -73,16 +73,20 @@
 		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
 		\normalsize \par}
 
+\newcommand{\ReferenciasEntry}[2]{						% Same as \ReferenciasEntry
+		\noindent \textbf{#1} \hfill 					% Jobname
+		\colorbox{Black}{\color{White}#2} \par		% Duration
+		\noindent \textit{#3} \par					% Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
+		\normalsize \par}
+
 
 
 %%% ------------------------------------------------------------
 %%% BEGIN DOCUMENT
 %%% ------------------------------------------------------------
 \begin{document}
-\begin{wrapfigure}{l}{0.5\textwidth}
-	\vspace*{-2em}
-		\includegraphics[width=0.15\textwidth]{photo}
-\end{wrapfigure}
+
 
 \MyName{Ruben Hernan Ullon Alcivar}
 \MySlogan{Curriculum Vitae}
@@ -91,44 +95,44 @@
 
 %%% Personal details
 %%% ------------------------------------------------------------
-\NewPart{Personal details}{}
+\NewPart{Datos Personales}{}
 
-\PersonalEntry{Birth}{6 de Febrero, 1993} 
-\PersonalEntry{Address}{Guayaquil,Ecuador}
-\PersonalEntry{Phone}{0997266819}
-\PersonalEntry{Mail}{\url{hrua_06@hotmail.com}}
+\PersonalEntry{Fecha de Nacimiento}{6 de Febrero, 1993} 
+\PersonalEntry{Lugar de Nacimiento}{Guayaquil,Ecuador}
+\PersonalEntry{Telefono}{0997266819}
+\PersonalEntry{E-Mail}{\url{hrua_06@hotmail.com}}
 
 %%% Education
 %%% ------------------------------------------------------------
-\NewPart{Education}{} 
+\NewPart{Educacion}{} 
 
 \EducationEntry{Unidad Educativa Evangelica}{2009-2010}{"Ciencia y Fe"}{Bachillerato en Comercio y Administracion\\Especializacion: Aplicaciones en Informatica}
 \sepspace
 
-\EducationEntry{Escuela Superior Politecnica del Litoral}{2007-2010}{Name of University}{Descriptive text goes here. In order to maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in the education section.}
+\EducationEntry{Escuela Superior Politecnica del Litoral}{2010-2012}{"ESPOL"}{Ing. en Ciencias Computacionales\\Especializacion: Sistemas Tecnologicos\\5to Semestre}
+\sepspace
 
 %%% Work experience
 %%% ------------------------------------------------------------
-\NewPart{Work experience}{}
+\NewPart{Experiencia Laboral}{}
 
-\EducationEntry{Job name}{2011-present}{Company Name inc., Full-time}{Job description goes here. To maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in this section.}
+\EducationEntry{Ayudante Academico}{2012-present}{ESPOL\\Materia: Fundamentos de Programacion}
 \sepspace
 
-\EducationEntry{Job name}{2010-2011}{Company Name inc., Part-time}{Job description goes here. To maintain a stylish look, try to fill this description with a few lines of text. Do the same for the other entries in this section.}
 
 %%% Skills
 %%% ------------------------------------------------------------
-\NewPart{Skills}{}
+\NewPart{Conocimientos}{}
 
-\SkillsEntry{Languages}{Dutch (mother tongue)}
-\SkillsEntry{}{English (fluent)}
-\SkillsEntry{}{German (fluent)} 
+\SkillsEntry{Idiomas}{Ingles (Medio)}
 
-\SkillsEntry{Software}{\textsc{Matlab}, \LaTeX, \textsc{Ansys}, \textsc{Comsol}}
+\SkillsEntry{Software}{\textsc{Sci-Lab}, \textsc{Java}, \textsc{Logos}, \textsc{Lenguaje C}}
 
 
 %%% References
 %%% ------------------------------------------------------------
-\NewPart{References}{}
-Available upon request
+\NewPart{Referencias}{}
+\ReferenciasEntry{Lcdo. Yesta Peñafiel0996544322}
+\ReferenciasEntry{Sra. Noralma Chacon2-337203}
+\ReferenciasEntry{Sra. Mercy Tagle2-349708}
 \end{document}
